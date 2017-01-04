@@ -25,9 +25,15 @@ function theme_head() {
 		<script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js?load=effects" type="text/javascript"></script>
 	';
 }
-// [layout]
-$layout = '_default';
-$HEADER = '
+/* [layout]
+  custompages = homepage    $CUSTOMHEADER['HOME'] $CUSTOMFOOTER['HOME'] $CUSTOMHEADER['FULL']
+                = forum - full with page   $CUSTOMFOOTER['FULL']  $CUSTOMFOOTER['FULL']
+    default     = $HEADER   $FOOTER
+*/	
+$LAYOUT['_header_'] = '';
+/* temporarily 2 headers, it should be done in css because each layout has it's own ID Only diff is in first div */
+
+$header1 = '
 <div class="wrapper">
 	<div class="headerbg">
 		<div class="headertop">
@@ -54,131 +60,9 @@ $HEADER = '
 	<div class="navigation">
 		{FS_SITELINKS}
 	</div>
-	<div class="maincontentall">
-	  <div class="topcontentall clearfix">
-			<div class="rightcolall">
-			  {SETSTYLE=flatlinks}
-	      {LINKSTYLE=flatlinks}
-	      {SITELINKS=flat:2}
-				{SETSTYLE=bottmomenus}
-			  {MENU=1}
-			</div>
-			<div class="leftcol">
-			  {MENU=5}
 ';
-$FOOTER = '
-			  {MENU=6}
-			</div>
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="bottmomenus">
-		<div class="bmenul">
-			{MENU=2}
-		</div>
-		<div class="bmenur">
-			{MENU=4}
-		</div>
-		<div class="bmenum">
-			{MENU=3}
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="footerbor"></div>
-	<div class="footer">
-		<div class="fmenul">
-			<div>
-				<a href="http://validator.w3.org/check?uri=referer" title=""><img src="'.THEME_ABS.'images/bottom_xhtml.png" alt="" style="margin-top: 10px;" /></a>
-			</div>
-		</div>
-		<div class="fmenur smalltext">
-			{SITEDISCLAIMER}
-		</div>
-		<div class="fmenum">
-			<a href="http://www.e107.org" title="e107"><img src="'.THEME_ABS.'images/e_logo_small.png" alt="" /></a>
-			<br />{SITENAME}
-		</div>
-	</div>
-	<div class="footerlinks">
-	  {LINKSTYLE=bottom}
-	  {SITELINKS=flat:3}
-	</div>
-</div>
-';
-$CUSTOMHEADER['HOME'] = '
-<div class="wrapper">
-	<div class="headerbg">
-		<div class="headertop">
-			<div class="sitelogo">
-			  <div class="ml20">
-	      	<a href="'.e_HTTP.'index.php" title="{SITENAME}">{LOGO}</a>
-	      </div>
-			</div>
-			<div class="banner">
-			  <div class="mr20">
-					{BANNER=campaign_one}
-				</div>
-			</div>
-		</div>
-		<div class="headerbottom">
-			<div class="fs_login">
-				{FS_LOGIN}
-			</div>
-			<div class="sitesearch">
-				{SEARCH}
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		{FS_SITELINKS}
-	</div>
-	<div class="maincontent">
-	  <div class="topcontent clearfix">
-	    {SETSTYLE=wm}
-	    {WMESSAGE}
 
-';
-$CUSTOMFOOTER['HOME'] = '
-
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="bottmomenus">
-		<div class="bmenul">
-		  {SETSTYLE=bottmomenus}
-			{MENU=2}
-		</div>
-		<div class="bmenur">
-			{MENU=4}
-		</div>
-		<div class="bmenum">
-			{MENU=3}
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="footerbor"></div>
-	<div class="footer">
-		<div class="fmenul">
-			<div>
-				<a href="http://validator.w3.org/check?uri=referer" title=""><img src="'.THEME_ABS.'images/bottom_xhtml.png" alt="" style="margin-top: 10px;" /></a>
-			</div>
-		</div>
-		<div class="fmenur smalltext">
-			{SITEDISCLAIMER}
-		</div>
-		<div class="fmenum">
-			<a href="http://www.e107.org" title="e107"><img src="'.THEME_ABS.'images/e_logo_small.png" alt="" /></a>
-			<br />{SITENAME}
-		</div>
-	</div>
-	<div class="footerlinks">
-	  {LINKSTYLE=bottom}
-	  {SITELINKS=flat:3}
-	</div>
-</div>
-';
-$CUSTOMPAGES['HOME'] = SITEURL.'index.php';
-$CUSTOMHEADER['FULL'] = '
+$header2 = '  
 <div class="wrapper_full">
 	<div class="headerbg">
 		<div class="headertop">
@@ -205,15 +89,9 @@ $CUSTOMHEADER['FULL'] = '
 	<div class="navigation">
 		{FS_SITELINKS}
 	</div>
-	<div class="maincontent">
-		<div class="fullside">
-		  {SETSTYLE=full}
 ';
-$CUSTOMFOOTER['FULL'] = '
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="footerborfull"></div>
+
+$LAYOUT['_footer_'] = '
 	<div class="footer">
 		<div class="fmenul">
 			<div>
@@ -234,8 +112,77 @@ $CUSTOMFOOTER['FULL'] = '
 	</div>
 </div>
 ';
-$CUSTOMPAGES['FULL'] = 'forum/ ';
-//	[tablestyle]
+
+$LAYOUT['homepage'] 				 = $header1.'
+	<div class="maincontent">
+	  <div class="topcontent clearfix">
+	    {SETSTYLE=wm}
+	    {WMESSAGE}
+	    {---}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bottmomenus">
+		<div class="bmenul">
+		  {SETSTYLE=bottmomenus}
+			{MENU=2}
+		</div>
+		<div class="bmenur">
+			{MENU=4}
+		</div>
+		<div class="bmenum">
+			{MENU=3}
+		</div>
+	</div>
+';
+	
+$LAYOUT['full']     				 = $header2.'
+	<div class="maincontent">
+		<div class="fullside">
+		  {SETSTYLE=full}
+			{---}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="footerborfull"></div>
+';
+$LAYOUT['sidebar_right']     = $header1.'
+	<div class="maincontentall">
+	  <div class="topcontentall clearfix">
+			<div class="rightcolall">
+			  {SETSTYLE=flatlinks}
+	      {LINKSTYLE=flatlinks}
+	      {SITELINKS=flat:2}
+				{SETSTYLE=bottmomenus}
+			  {MENU=1}
+			</div>
+			<div class="leftcol">
+			  {MENU=5}
+			  {---}	
+			</div>	
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bottmomenus">
+		<div class="bmenul">
+		  {SETSTYLE=bottmomenus}
+			{MENU=2}
+		</div>
+		<div class="bmenur">
+			{MENU=4}
+		</div>
+		<div class="bmenum">
+			{MENU=3}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="footerbor"></div>';
+
+							  
+ 
+ 
+ 
+ //	[tablestyle]
 function tablestyle($caption, $text, $mode=''){
 	global $style;
 	
