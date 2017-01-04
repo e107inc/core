@@ -57,7 +57,7 @@ $header = '
 			</div>
 			<div class="banner">
 			  <div class="mr20">
-					{BANNER=campaign_one}
+					{BANNER=e107promo}
 				</div>
 			</div>
 		</div>
