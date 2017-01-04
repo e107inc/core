@@ -1,8 +1,8 @@
 <?php
 if(!defined('e107_INIT')){ exit; }
+
 // [multilanguage]
-include_lan(e_THEME.'core/languages/'.e_LANGUAGE.'.php');
-@include_lan(e_THEME.'core/languages/English.php');
+e107::lan('theme');
  
 define('IMODE', 'lite');
 define('STANDARDS_MODE', TRUE);
