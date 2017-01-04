@@ -3,16 +3,7 @@ if(!defined('e107_INIT')){ exit; }
 // [multilanguage]
 include_lan(e_THEME.'core/languages/'.e_LANGUAGE.'.php');
 @include_lan(e_THEME.'core/languages/English.php');
-// [theme information]
-$themename = 'e107 core';
-$themeversion = ' 1.0';
-$themeauthor = 'e107 Inc.';
-$themeemail = 'themes@e107.org';
-$themewebsite = 'http://www.e107.org';
-$themedate = '12/2011';
-$themeinfo = '';
-$xhtmlcompliant = TRUE;
-$csscompliant = TRUE;
+ 
 define('IMODE', 'lite');
 define('STANDARDS_MODE', TRUE);
 define('USER_WIDTH','width: 100%');

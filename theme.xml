@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="Core" version="2.0.0" date="2017-01-14" compatibility="2.1.4">
+	<author name ="e107 Inc" email="themes@e107.org" url="http://e107.org" />
+	<summary>Core theme with twiter bootstrap support.</summary>
+	<description>a bootstrap 3 theme for the frontend</description>
+	<category>generic</category>
+	<plugins>
+		<plugin name='featurebox' url='core' />
+		<plugin name='gallery' url='core' />
+    <plugin name='rss_menu' url='core' />
+		<plugin name='social' url='core' />
+		<plugin name='banner' url='core' />				
+	</plugins>
+	<keywords>
+		<word>bootstrap</word>
+		<word>core</word>
+	</keywords>
+	<screenshots>
+		<image>preview.jpg</image>
+	</screenshots>
+	<stylesheets>
+		<css file="style.css" name="Default"  />
+	</stylesheets>
+</e107Theme>
