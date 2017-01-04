@@ -133,9 +133,7 @@ $LAYOUT['sidebar_right']     = $header.'
 	<div class="maincontentall">
 	  <div class="topcontentall clearfix">
 			<div class="rightcolall">
-			  {SETSTYLE=flatlinks}
-	      {LINKSTYLE=flatlinks}
-	      {SITELINKS=flat:2}
+			  {NAVIGATION=side}
 				{SETSTYLE=bottmomenus}
 			  {MENU=1}
 			</div>
@@ -197,15 +195,6 @@ switch ($style) {
 			'.$text.'
 		</div>
 				';
-	break;
-	case 'flatlinks':
-	echo '
-	<div class="styledmenu">
-    <div class="13">
-      '.$text.'
-    </div>
-  </div>
-        ';
 	break;
 	case 'full':
 	echo '
@@ -415,15 +404,6 @@ function linkstyle($np_linkstyle) {
 	$linkstyleset['linkclass_hilite'] = "";
 	$linkstyleset['linkseparator'] = "&nbsp;&nbsp;";
     break;
-  case 'flatlinks':
-  $linkstyleset['linkdisplay']      = 2;
-	$linkstyleset['prelink'] = '<ul>';
-	$linkstyleset['postlink'] = '</ul>';
-  $linkstyleset['linkstart'] = '<li>';
-	$linkstyleset['linkend'] = '</li>';
-  $linkstyleset['linkstart_hilite'] = "<li class='current'>";
-	$linkstyleset['linkclass_hilite'] = "current";
-  break;
   default: // if no LINKSTYLE defined
   $linkstyleset['linkdisplay']      = 1;
   define('PRELINK', '');
