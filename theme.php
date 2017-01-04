@@ -17,7 +17,6 @@ define("FS_END_SEPARATOR", FALSE);
 define("ADLINK_COLS",5);
 $register_sc[]='FS_SITELINKS';
  
-$register_sc[]='ADMIN_ALT_NAV';
 
 function theme_head() {
 	return '
