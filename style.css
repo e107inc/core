@@ -1313,3 +1313,9 @@ padding: 10px 5px ;
 padding: 10px 5px ;
 }
  */
+ 
+/* to use the same class for header */
+#layout-full .wrapper {
+    width: 95%;
+    margin: 0px auto;
+}

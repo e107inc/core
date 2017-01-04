@@ -30,40 +30,9 @@ function theme_head() {
                 = forum - full with page   $CUSTOMFOOTER['FULL']  $CUSTOMFOOTER['FULL']
     default     = $HEADER   $FOOTER
 */	
-$LAYOUT['_header_'] = '';
-/* temporarily 2 headers, it should be done in css because each layout has it's own ID Only diff is in first div */
 
-$header1 = '
+$LAYOUT['_header_'] = ' 
 <div class="wrapper">
-	<div class="headerbg">
-		<div class="headertop">
-			<div class="sitelogo">
-			  <div class="ml20">
-	      	<a href="'.e_HTTP.'index.php" title="{SITENAME}">{LOGO}</a>
-	      </div>
-			</div>
-			<div class="banner">
-			  <div class="mr20">
-					{BANNER=campaign_one}
-				</div>
-			</div>
-		</div>
-		<div class="headerbottom">
-			<div class="fs_login">
-				{FS_LOGIN}
-			</div>
-			<div class="sitesearch">
-				{SEARCH}
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		{FS_SITELINKS}
-	</div>
-';
-
-$header2 = '  
-<div class="wrapper_full">
 	<div class="headerbg">
 		<div class="headertop">
 			<div class="sitelogo">
@@ -113,7 +82,7 @@ $LAYOUT['_footer_'] = '
 </div>
 ';
 
-$LAYOUT['homepage'] 				 = $header1.'
+$LAYOUT['homepage'] 				 = '
 	<div class="maincontent">
 	  <div class="topcontent clearfix">
 	    {SETSTYLE=wm}
@@ -136,7 +105,7 @@ $LAYOUT['homepage'] 				 = $header1.'
 	</div>
 ';
 	
-$LAYOUT['full']     				 = $header2.'
+$LAYOUT['full']     				 = '
 	<div class="maincontent">
 		<div class="fullside">
 		  {SETSTYLE=full}
