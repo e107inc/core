@@ -4,6 +4,10 @@ if(!defined('e107_INIT')){ exit; }
 // [multilanguage]
 e107::lan('theme');
 
+define("BOOTSTRAP", 	3);
+define("FONTAWESOME", 	4);
+define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
+
 // standalone login page
 if((strpos(e_REQUEST_URI, 'login') !== false)) {define('e_IFRAME','0');}
  
@@ -16,8 +20,12 @@ define("FS_START_SEPARATOR", FALSE);
 define("FS_END_SEPARATOR", FALSE);
 define("ADLINK_COLS",5);
 $register_sc[]='FS_SITELINKS';
- 
 
+e107::js("url", 			"https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js", 'jquery', 2);
+e107::css('url', 'https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css');
+e107::css('url',    'https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css');
+
+/*
 function theme_head() {
 	return '
 		<!--[if lte IE 7]>
@@ -26,7 +34,7 @@ function theme_head() {
 		<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js?load=effects" type="text/javascript"></script>
 	';
-}
+}       */
 /* [layout]
   custompages = homepage    $CUSTOMHEADER['HOME'] $CUSTOMFOOTER['HOME'] $CUSTOMHEADER['FULL']
                 = forum - full with page   $CUSTOMFOOTER['FULL']  $CUSTOMFOOTER['FULL']
