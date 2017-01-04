@@ -16,7 +16,7 @@ define("FS_START_SEPARATOR", FALSE);
 define("FS_END_SEPARATOR", FALSE);
 define("ADLINK_COLS",5);
 $register_sc[]='FS_SITELINKS';
-$register_sc[]='FS_LOGIN';
+ 
 $register_sc[]='ADMIN_ALT_NAV';
 
 function theme_head() {
@@ -34,7 +34,10 @@ function theme_head() {
     default     = $HEADER   $FOOTER
 */	
 
-$LAYOUT['_header_'] = ' 
+/* reason: login page has no header */
+$LAYOUT['_header_'] = '';
+$LAYOUT['_footer_'] = '';
+$header = ' 
 <div class="wrapper">
 	<div class="headerbg">
 		<div class="headertop">
@@ -63,7 +66,7 @@ $LAYOUT['_header_'] = '
 	</div>
 ';
 
-$LAYOUT['_footer_'] = '
+$footer = '
 	<div class="footer">
 		<div class="fmenul">
 			<div>
@@ -85,7 +88,7 @@ $LAYOUT['_footer_'] = '
 </div>
 ';
 
-$LAYOUT['homepage'] 				 = '
+$LAYOUT['homepage'] 				 = $header.'
 	<div class="maincontent">
 	  <div class="topcontent clearfix">
 	    {SETSTYLE=wm}
@@ -106,9 +109,9 @@ $LAYOUT['homepage'] 				 = '
 			{MENU=3}
 		</div>
 	</div>
-';
+'.$footer;
 	
-$LAYOUT['full']     				 = '
+$LAYOUT['full']     				 = $header.'
 	<div class="maincontent">
 		<div class="fullside">
 		  {SETSTYLE=full}
@@ -117,8 +120,9 @@ $LAYOUT['full']     				 = '
 	</div>
 	<div class="clear"></div>
 	<div class="footerborfull"></div>
-';
-$LAYOUT['sidebar_right']     = $header1.'
+'.$footer;
+
+$LAYOUT['sidebar_right']     = $header.'
 	<div class="maincontentall">
 	  <div class="topcontentall clearfix">
 			<div class="rightcolall">
@@ -148,9 +152,16 @@ $LAYOUT['sidebar_right']     = $header1.'
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="footerbor"></div>';
+	<div class="footerbor"></div>'
+	.$footer;
 
-							  
+$LAYOUT['login'] =  '  
+  {SETSTYLE=none}
+  <div class="container">
+     {ALERTS}
+  </div>
+  {---}
+ ';							  
  
  
  

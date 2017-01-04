@@ -82,7 +82,7 @@ if(!isset($LOGIN_TABLE_FOOTER))
 			$LOGIN_TABLE_FOOTER = "
 			<div style='width:70%;margin-right:auto;margin-left:auto; font-weight: bold;'>
 				<div style='text-align:center'><br />
-					{LOGIN_TABLE_FOOTER_USERREG}&nbsp;&nbsp;&nbsp;<a href='".e_BASE."fpw.php'>".LAN_LOGIN_12."</a>
+					{LOGIN_TABLE_FOOTER_USERREG} </a>
 				</div>
 			</div>
 		</div>
