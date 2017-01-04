@@ -57,6 +57,7 @@ $header = '
 			</div>
 			<div class="banner">
 			  <div class="mr20">
+					{SETIMAGE: w=450}
 					{BANNER=e107promo}
 				</div>
 			</div>
