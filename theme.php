@@ -21,10 +21,12 @@ define("FS_END_SEPARATOR", FALSE);
 define("ADLINK_COLS",5);
 $register_sc[]='FS_SITELINKS';
 
-e107::js("url", 			"https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js", 'jquery', 2);
+
 e107::css('url', 'https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css');
 e107::css('url',    'https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css');
 
+
+e107::js("footer", 			"https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js", 'jquery', 2);
 /*
 function theme_head() {
 	return '
@@ -167,8 +169,9 @@ $LAYOUT['login'] =  '
   </div>
   {---}
  ';							  
- 
- 
+
+// for future using 
+$LAYOUT['sidebar_left'] =  $LAYOUT['sidebar_right']; 
  
  //	[tablestyle]
 function tablestyle($caption, $text, $mode=''){
