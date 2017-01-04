@@ -83,7 +83,11 @@ function sc_fs_login($parm = '')
 	}
 }
 
-
+	function sc_menu_button_url($parm='') {
+		$sc   = e107::getScBatch('page', null, 'cpage');
+  	$data = $sc->getVars(); 
+  	return e107::getParser()->replaceConstants($data['menu_button_url']);
+	}
 
   // left for future using
 	function sc_bootstrap_usernav($parm='')
