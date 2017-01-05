@@ -232,8 +232,18 @@ function sc_fs_login($parm = '')
 
 
 		return e107::getParser()->parseTemplate($text,true,$login_menu_shortcodes);
-	}	
- 
+	}
+	
+	function sc_core_wmessage() {	
+		if($wmimage = e107::pref('theme', 'wmimage', false))
+		{
+			$wmimage = e107::getParser()->toImage($wmimage);
+			$text = '<div class="col-md-6 col-sm-6 col-xs-12 col-xxs-12">'.$wmimage.'</div>';
+			$text .= '<div class="col-md-6 col-sm-6 col-xs-12 col-xxs-12">';
+		}
+		else $text .= '<div class="col-md-12 col-sm-12">';
+		return $text;
+  }
 }
 
 

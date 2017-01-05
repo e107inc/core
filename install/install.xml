@@ -207,5 +207,16 @@
 			<field name="menu_button_text"></field>
 		</item>
 	</dbTable>
+	<dbTable name="generic">
+		<item>
+			<field name="gen_id">1</field>
+			<field name="gen_type">wmessage</field>
+			<field name="gen_datestamp">1145848343</field>
+			<field name="gen_user_id">1</field>
+			<field name="gen_ip"></field>
+			<field name="gen_intdata">0</field>
+			<field name="gen_chardata"><![CDATA[[html]<p><strong class=&quot;bold&quot;>Welcome to your new website!</strong><br><br><span>e107 has been installed successfully and is now ready to accept content. Your administration section is </span><a class=&quot;bbcode&quot; href=&quot;{e_ADMIN}admin.php&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>located here</a><span>, click to go there now. You will need to login using the name and password which you entered during the installation process.</span><br><br><strong class=&quot;bbcode bold&quot;>Support</strong><br><a class=&quot;bbcode&quot; href=&quot;http://e107.org/&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>e107 Homepage</a><br><a class=&quot;bbcode&quot; href=&quot;http://e107help.org/&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>e107 Help</a><br><a class=&quot;bbcode&quot; href=&quot;http://e107.org/developer-manual/&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>e107 Developer Manual</a><br><br><span>Thank you for trying e107, we hope it fulfills your website needs.</span></p>[/html]]]></field>
+		</item>
+	</dbTable>
 	</database>
 </e107Export>

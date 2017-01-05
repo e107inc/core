@@ -382,7 +382,7 @@ margin-right: 20px;
 margin-left: 20px;
 }
 .wrapper {
-width: 1000px;
+/* width: 1000px;  */
 margin: 0px auto ;
 }
 .wrapper_full {
@@ -1318,4 +1318,13 @@ padding: 10px 5px ;
 #layout-full .wrapper {
     width: 95%;
     margin: 0px auto;
+}
+
+/* New Column Class for width < 558px */
+@media (max-width: 558px) { 
+.col-xxs-12 {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  float: none;
 }

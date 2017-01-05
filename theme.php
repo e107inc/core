@@ -47,8 +47,8 @@ function theme_head() {
 $LAYOUT['_header_'] = '';
 $LAYOUT['_footer_'] = '';
 $header = ' 
-<div class="wrapper">
-	<div class="headerbg">
+<div class="wrapper container">
+	<div class="headerbg row">
 		<div class="headertop">
 			<div class="sitelogo">
 			  <div class="ml20">
@@ -71,7 +71,7 @@ $header = '
 			</div>
 		</div>
 	</div>
-	<div class="navigation">
+	<div class="navigation row">
 		{FS_SITELINKS}
 	</div>
 ';
@@ -97,12 +97,15 @@ $footer = '
 	</div>
 </div>
 ';
-
+/* first div is inside {CORE_MESSAGE} */
 $LAYOUT['homepage'] 				 = $header.'
-	<div class="maincontent">
-	  <div class="topcontent clearfix">
+	<div class="maincontent row">
+	  <div class="topcontent clearfix ">
+	    <div class="topcontent_entry clearfix">
 	    {SETSTYLE=wm}
-	    {WMESSAGE}
+	    {CORE_WMESSAGE}			
+			{WMESSAGE}</div>
+			</div>
 	    {---}
 		</div>
 	</div>
@@ -194,11 +197,7 @@ function tablestyle($caption, $text, $mode=''){
 switch ($style) {
 
 	case 'wm':
-	echo '
-		<div class="topcontent_entry clearfix">
-			'.$text.'
-		</div>
-				';
+	echo '<h2 class="title_clean">'.$caption.'</h2><div>'.$text.'</div>';
 	break;
 	case 'full':
 	echo '

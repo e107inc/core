@@ -11,8 +11,8 @@ class theme_config implements e_theme_config
 		// v2.1.4 format.
 
 		$fields = array(
-			 
- 		);
+			'wmimage'           => array('title' => 'Image for welcome message', 'type'=>'image', 'help'=>''),
+		);
 
 		return $fields;
  
