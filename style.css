@@ -393,7 +393,7 @@ margin: 0px auto ;
 .headerbg {
 background: transparent url(images/headerbg.png) repeat-x 0px 0px;
 /* width: 100%; */
-height: 186px;;
+/* height: 186px;;  */
 }
 .headertop {
 height: 135px;
@@ -424,7 +424,7 @@ width: 100%
 }
 /* LOGIN CSS */
 .fs_login {
-width: 500px;
+/*width: 500px;*/
 float: left;
 height: 50px;
 }
@@ -480,7 +480,7 @@ text-decoration: none;
 }
 .fs_c_login2 {
 padding: 10px 0px ;
-width: 600px;
+/* width: 600px; */
 }
 span.logout {
 color: #FFFFFF;
@@ -544,10 +544,10 @@ padding: 0px 10px 0px 10px ;
 }
 /* SEARCH BOX CSS */
 .sitesearch {
-width: 300px;
+/* width: 300px;   */
 text-align: right;
 float: right;
-margin-right: 20px;
+/*margin-right: 20px;  */
 margin-top: 4px;
 }
 .search-form {
@@ -1352,12 +1352,27 @@ padding: 10px 5px ;
 	}
 	
 	.banner {
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 10px 0px;
     text-align: center;
 	}
 	
 	.banner	.ml20 { margin-left: 2px; }
 	.banner .mr20 { margin-right: 2px; }
+
+	.headerbottom {
+	    height: auto;
+	}
+	
+	.fs_login {
+	 text-align: center;
+	 float: none;
+	 height: auto;
+	}
+	.sitesearch {
+	  text-align: center;
+		margin-top: 16px;
+    margin-bottom: 6px;
+	}
 }
 
 /* Small devices Tablets .col-sm */
@@ -1409,4 +1424,11 @@ padding: 10px 5px ;
     margin: 0px;
     padding: 10px 2px;
  }
+ 
+	.fs_c_login2 {
+	    line-height: 60px;
+	}
+	.sitesearch {
+    margin-top: 0px; 
+}
 }
