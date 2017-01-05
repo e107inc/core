@@ -48,21 +48,21 @@ $LAYOUT['_header_'] = '';
 $LAYOUT['_footer_'] = '';
 $header = ' 
 <div class="wrapper container">
-	<div class="headerbg row">
-		<div class="headertop">
-			<div class="sitelogo">
+	<div class="headerbg ">
+		<div class="headertop row">
+			<div class="sitelogo col-md-4 col-sm-5 col-xs-12 text-center">
 			  <div class="ml20">
 	      	<a href="{SITEURL}" title="{SITENAME}">{LOGO}</a>
 	      </div>
 			</div>
-			<div class="banner">
+			<div class="banner col-md-8  col-xs-12  col-sm-7">
 			  <div class="mr20">
 					{SETIMAGE: w=450}
-					{BANNER=e107promo}
+					{BANNER=e107promo}			 
 				</div>
 			</div>
 		</div>
-		<div class="headerbottom">
+		<div class="headerbottom row">
 			<div class="fs_login">
 				{FS_LOGIN}
 			</div>
