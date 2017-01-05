@@ -133,8 +133,8 @@ $LAYOUT['homepage'] 				 = $header.'
 '.$footer;
 	
 $LAYOUT['full']     				 = $header.'
-	<div class="maincontent">
-		<div class="fullside">
+	<div class="maincontent row">
+		<div class="fullside col-md-12">
 		  {SETSTYLE=full}
 			{---}
 		</div>
@@ -144,17 +144,18 @@ $LAYOUT['full']     				 = $header.'
 '.$footer;
 
 $LAYOUT['sidebar_right']     = $header.'
-	<div class="maincontentall">
+	<div class="maincontentall row">
 	  <div class="topcontentall clearfix">
-			<div class="rightcolall">
+	    <div class="leftcol col-md-9 col-xxs-12">
+			  {MENU=5}
+			  {---}	
+			</div>	
+			<div class="rightcolall col-md-3 col-xxs-12">
 			  {NAVIGATION=side}
 				{SETSTYLE=bottmomenus}
 			  {MENU=1}
 			</div>
-			<div class="leftcol">
-			  {MENU=5}
-			  {---}	
-			</div>	
+
 		</div>
 	</div>
 	<div class="clear"></div>

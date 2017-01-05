@@ -806,14 +806,14 @@ padding: 20px 20px ;
 }
 /* RIGHT SITE SIDE CSS */
 .rightcolall {
-float: right;
-width: 300px;
+/*float: right;
+width: 300px; */
 font-size: 13px;
 }
 .rightcol {
-float: right;
+/*float: right;
 width: 300px;
-font-size: 13px;
+font-size: 13px;  */
 margin-top: 63px;
 }
 .rightbox {
@@ -864,8 +864,8 @@ margin: 0px auto ;
 }
 /* LEFT SITE SIDE CSS */
 .leftcol {
-width: 600px;
-float: left;
+/*width: 600px;
+float: left;    */
 font-size: 13px;
 }
 .leftbox {
