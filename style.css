@@ -582,171 +582,106 @@ margin: 0px auto ;
 height: 62px;
 background: url(images/navbg.png) repeat-x 0px 0px;
 }
-#nav li.fs-linkSep {
+.nav li.fs-linkSep {
 background: url(images/nav_sep.png) no-repeat 0px 50%;
 width: 2px;
 height: 62px;
 }
-#nav a {
+.nav a {
 padding: 0px;
 margin: 0px;
 list-style: none;
 }
-#nav ul {
+.nav ul {
 padding: 0px 0px;
 margin: 0px;
 list-style: none;
 cursor: pointer;
 }
-#nav li {
-float: left;
+.nav li {
+ 
 font-size: 18px;
 font-weight: normal;
 }
-#nav li a {
+.nav li a {
 color: #656565;
 text-shadow: 2px 2px 2px #B5B5B7;
 margin: 0px 10px;
 padding: 20px 20px 10px 20px ;
-display: block;
 text-decoration: none;
 }
-#nav li#active a {
-display: block;
+.nav li#active a {
 text-decoration: none;
 color:#3399CB;
 background: url(images/nav_hover.png) no-repeat 0px 100%;
 }
-#nav li a:hover,
-#nav li.sfhover a,
-#nav li:hover a {
-display: block;
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+background: url(images/nav_hover.png) no-repeat 0px 100%;
+}
+
+.nav li a:hover,
+.nav li.sfhover a,
+.nav li:hover a {
 text-decoration: none;
 color:#3399CB;
 }
-#nav li#active,
-#nav li.sfhover,
-#nav li:hover {
+.nav li#active,
+.nav li.sfhover,
+.nav li:hover {
 cursor: pointer;
 }
-#nav li.sub-sfhover,
-#nav li.sub:hover {
+.nav li.sub-sfhover,
+.nav li.sub:hover {
 cursor: pointer;
 }
-#nav li.sub-sfhover a,
-#nav li.sub-sfhover a:hover,
-#nav li.sub:hover a,
-#nav li.sub:hover a:hover {
+.nav li.sub-sfhover a,
+.nav li.sub-sfhover a:hover,
+.nav li.sub:hover a,
+.nav li.sub:hover a:hover {
 }
-#nav li#active a,
-#nav li a:hover,
-#nav li.sfhover a,
-#nav li:hover a {
-display: block;
+.nav li#active a,
+.nav li a:hover,
+.nav li.sfhover a,
+.nav li:hover a {
 text-decoration: none;
 }
-#nav li#active,
-#nav li.sfhover,
-#nav li:hover {
+.nav li#active,
+.nav li.sfhover,
+.nav li:hover {
 cursor: pointer;
 }
-#nav li.sub-sfhover,
-#nav li.sub:hover {
+.nav li.sub-sfhover,
+.nav li.sub:hover {
 cursor: pointer;
 }
 /* LEVEL 2 */
-#nav li li a {
+.nav li li a {
 margin-left: 0px;
 display: block;
 padding: 0px;
 float: none;
 padding-left: 15px;
-width: 180px;
-width/* */:/**/165px;
-width: /**/165px;
 color: #000000;
 font-size: 14px;
 font-weight: normal;
 border-bottom: 1px #B5B5B7 solid;
 }
-#nav li li a:hover {
+.nav li li a:hover {
 background-color: #B5B5B7;
 color: #656565;
 border-bottom: 1px #B5B5B7 solid;
 }
-#nav li ul { /* second-level lists */
-position: absolute;
-z-index: 1000;
-width: 180px;
-left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+.nav li ul { /* second-level lists */
 background-color: #F6F8F8;
 color: #656565;
 line-height: 32px;
 }
-#nav li:hover ul,
-#nav li.sfhover ul,
-#nav li.sub-sfhover ul {
-background-image: none;
-background-repeat: no-repeat;
-background-position: 0px 100%;
+ 
+.nav li ul li { 
+padding: 10px;
 }
-#nav li.sub-sfhover ul.sub,
-#nav li.sub:hover ul.sub {
-margin-left: 0px;
-padding-bottom: 0px;
-}
-#nav li ul ul { /* third-and-above-level lists */
-margin: -28px 0px 0px 180px;
-}
-#nav ul.sub li,
-#nav ul.sub li a,
-#nav ul.sub li a:hover,
-#nav ul.sub li:hover,
-#nav ul.sub li:hover a,
-#nav ul.sub li.sfhover a,
-#nav ul.sub li:hover a:hover,
-#nav ul.sub li.sfhover a:hover,
-#nav li.sub ul.sub a
-{ background-image: none; }
-#nav li#active ul.sub li,
-#nav li#active ul.sub li a,
-#nav li#active ul.sub li a:hover,
-#nav li#active ul.sub li:hover,
-#nav li#active ul.sub li:hover a,
-#nav li#active ul.sub li.sfhover a,
-#nav li#active ul.sub li:hover a:hover,
-#nav li#active ul.sub li.sfhover a:hover,
-#nav li.sub ul.sub a
-{ background-image: none; }
-#nav li:hover ul ul,
-#nav li:hover ul ul ul,
-#nav li:hover ul ul ul ul,
-#nav li.sfhover ul ul,
-#nav li.sfhover ul ul ul,
-#nav li.sfhover ul ul ul ul,
-#nav li.sub-sfhover ul ul,
-#nav li.sub-sfhover ul ul ul,
-#nav li.sub-sfhover ul ul ul ul {
-left: -999em;
-}
-#nav li:hover ul,
-#nav li li:hover ul,
-#nav li li li:hover ul,
-#nav li li li li:hover ul,
-#nav li.sfhover ul,
-#nav li li.sfhover ul,
-#nav li li li.sfhover ul,
-#nav li li li li.sfhover ul,
-#nav li.sub-sfhover ul,
-#nav li.sub-sfhover li.sfhover ul,
-#nav li.sub-sfhover li li.sfhover ul,
-#nav li.sub-sfhover li li li.sfhover ul { /* lists nested under hovered list items */
-left: auto;
-}
-#nav a.sub {
-}
-#nav a.sub:hover {
-}
+ 
 /* MAIN CONTENT CSS */
 .maincontent {
 background: #FFFFFF url(images/contentbg.png) repeat-x 0px 0px;
@@ -1339,6 +1274,24 @@ padding: 10px 5px ;
     margin: 0px auto;
 }
 
+.navbar-toggle {
+  border-color: #3399CC;
+  border-radius: 2px;
+  margin-top: 20px;
+  color: #3399CC;
+  padding: 12px 16px 12px 16px;
+  background-color: #3399CC;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+} 
+ 
+.navbar-toggle:hover, .navbar-toggle:focus {
+  background-color: #333333;
+} 
+ 
+
 /* Extra small devices Phones (<768px)  .col-xs */
 @media all and (max-width: 767px) { 
 	
@@ -1375,7 +1328,12 @@ padding: 10px 5px ;
 		margin-top: 16px;
     margin-bottom: 6px;
 	}
+	.e-banner-description {
+	 display: none;
+	}
 }
+
+
 
 /* Small devices Tablets .col-sm */
 @media all and (min-width: 768px) and (max-width: 991px)  {

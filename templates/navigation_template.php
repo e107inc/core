@@ -7,7 +7,6 @@
 */
 
  
-// TEMPLATE FOR {NAVIGATION=main}
 $NAVIGATION_TEMPLATE['main']['start'] = '<ul class="nav navbar-nav">';
 
 // Main Link
@@ -84,15 +83,6 @@ $NAVIGATION_TEMPLATE['main']['submenu_loweritem'] = '
 				{LINK_SUB}
 			</li>
 ';
-
-$NAVIGATION_TEMPLATE['main']['submenu_loweritem_active'] = '
-			<li role="menuitem" class="dropdown-submenu active">
-				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
-				{LINK_SUB}
-			</li>
-';
-
-$NAVIGATION_TEMPLATE['main']['submenu_lowerend'] = '</ul>';
 
 
 
