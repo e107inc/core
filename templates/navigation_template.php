@@ -7,7 +7,7 @@
 */
 
  
-$NAVIGATION_TEMPLATE['main']['start'] = '<ul class="nav navbar-nav">';
+$NAVIGATION_TEMPLATE['main']['start'] = '<ul id="nav" class="nav navbar-nav">';
 
 // Main Link
 $NAVIGATION_TEMPLATE['main']['item'] = '
