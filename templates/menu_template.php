@@ -18,7 +18,7 @@ if (!defined('e107_INIT')) { exit; }
 
 	$MENU_TEMPLATE['image-only']['start'] 				= '<div class="cpage-menu {CMENUNAME}">';
 	$MENU_TEMPLATE['image-only']['body'] 				= 
-	'<a href="{MENU_BUTTON_URL}" target="_blank" ><img class="img-responsive" src="{CMENUIMAGE=url}" alt=""   /></a> ';
+	'<a href="{MENU_BUTTON_URL}" target="_blank" >{CMENUIMAGE}</a> ';
 	$MENU_TEMPLATE['image-only']['end'] 				= '</div>';
 
 	$MENU_TEMPLATE['image-text-button']['start'] 		= '<div class="cpage-menu {CMENUNAME}">{SETIMAGE: w=360}';
