@@ -52,7 +52,7 @@ $header = '
 		<div class="headertop">
 			<div class="sitelogo">
 			  <div class="ml20">
-	      	<a href="'.e_HTTP.'index.php" title="{SITENAME}">{LOGO}</a>
+	      	<a href="{SITEURL}" title="{SITENAME}">{LOGO}</a>
 	      </div>
 			</div>
 			<div class="banner">
@@ -77,23 +77,31 @@ $header = '
 ';
 
 $footer = '
-	<div class="footer">
-		<div class="fmenul">
-			<div>
-				<a href="http://validator.w3.org/check?uri=referer" title=""><img src="'.THEME_ABS.'images/bottom_xhtml.png" alt="" style="margin-top: 10px;" /></a>
+	<div class="footer row">
+		<div class="col-md-4 col-xs-4 col-xxs-12 text-center">
+			<div class="fmenul">
+				<a href="http://validator.w3.org/check?uri=referer" title="">
+					<img class="img-responsive" src="'.THEME_ABS.'images/bottom_xhtml.png" alt="validator"  /></a>
 			</div>
 		</div>
-		<div class="fmenur smalltext">
-			{SITEDISCLAIMER}
-		</div>
-		<div class="fmenum">
-			<a href="http://www.e107.org" title="e107"><img src="'.THEME_ABS.'images/e_logo_small.png" alt="" /></a>
+		<div class="col-md-4 col-xs-4 col-xxs-12 text-center">
+		  <div class="fmenum">
+			<a href="http://www.e107.org" title="e107"><img class="img-responsive" src="'.THEME_ABS.'images/e_logo_small.png" alt="e107" /></a>
 			<br />{SITENAME}
+			</div>
 		</div>
+		<div class="col-md-4 col-xs-4 col-xxs-12 text-center">
+		  <div class="fmenur smalltext">
+			{SITEDISCLAIMER}
+			</div>
+		</div>
+
 	</div>
-	<div class="footerlinks">
+	<div class="footerlinks row">
+	  <div class="col-xs-12">
 	  {LINKSTYLE=bottom}
 	  {SITELINKS=flat:3}
+	  </div>
 	</div>
 </div>
 ';

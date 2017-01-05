@@ -996,21 +996,32 @@ text-decoration: none;
 }
 .fmenul {
 float: left;
-width: 300px;
-}
-.fmenur {
-float: right;
 text-align: center;
-width: 300px;
+width: auto;
+}
+
+.fmenul .img-responsive {
+ display: inherit;
+}
+
+.fmenur {
+float: right;   
+text-align: center;
+width: auto;
 color: #656565;
 }
 .fmenum {
 text-align: center;
-margin: 0px 310px;
+/* margin: 0px 310px;  */
 width: auto;
 color: #3399CC;
 font-weight: bold;
 font-size: 14px;
+}
+
+.fmenum .img-responsive
+ {
+ display: inherit;
 }
 .footerlinks {
 width: auto;
@@ -1326,5 +1337,8 @@ padding: 10px 5px ;
   position: relative;
   min-height: 1px;
   width: 100%;
-  float: none;
+ } 
+.fmenul {
+ float: none;
+}
 }
