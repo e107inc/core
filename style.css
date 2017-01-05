@@ -1359,10 +1359,12 @@ padding: 10px 5px ;
 	.banner	.ml20 { margin-left: 2px; }
 	.banner .mr20 { margin-right: 2px; }
 
-	.headerbottom {
+	.headertop {
 	    height: auto;
 	}
-	
+	.headerbottom {
+	    height: auto;
+	}	
 	.fs_login {
 	 text-align: center;
 	 float: none;
@@ -1430,5 +1432,10 @@ padding: 10px 5px ;
 	}
 	.sitesearch {
     margin-top: 0px; 
-}
+  }
+  
+  fs_c_login {
+    height: 70px;
+  }
+
 }

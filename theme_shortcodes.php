@@ -27,7 +27,7 @@ function sc_fs_login($parm = '')
 	if (!USER)
 	{
 		$loginsc = '
-	<div class="fs_c_login">
+	<div class="fs_c_login col-xs-offset-2 col-sm-offset-2 col-md-offset-0">
     <div class="singin">
 			<a href="' . e_HTTP . 'login.php">' . LAN_THEME_SING . '</a>
 		</div>
