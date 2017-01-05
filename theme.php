@@ -118,15 +118,15 @@ $LAYOUT['homepage'] 				 = $header.'
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="bottmomenus">
-		<div class="bmenul">
+	<div class="bottmomenus row">
+		<div class="bmenul col-md-4 col-xs-4 col-xxs-12">
 		  {SETSTYLE=bottmomenus}
 			{MENU=2}
 		</div>
-		<div class="bmenur">
+		<div class="bmenur col-md-4 col-xs-4 col-xxs-12">
 			{MENU=4}
 		</div>
-		<div class="bmenum">
+		<div class="bmenum col-md-4 col-xs-4 col-xxs-12">
 			{MENU=3}
 		</div>
 	</div>
@@ -158,15 +158,15 @@ $LAYOUT['sidebar_right']     = $header.'
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="bottmomenus">
-		<div class="bmenul">
+	<div class="bottmomenus row">
+		<div class="bmenul col-md-4 col-xs-4 col-xxs-12">
 		  {SETSTYLE=bottmomenus}
 			{MENU=2}
 		</div>
-		<div class="bmenur">
+		<div class="bmenur col-md-4 col-xs-4 col-xxs-12">
 			{MENU=4}
 		</div>
-		<div class="bmenum">
+		<div class="bmenum col-md-4 col-xs-4 col-xxs-12">
 			{MENU=3}
 		</div>
 	</div>

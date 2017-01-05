@@ -959,20 +959,20 @@ text-decoration: none;
 }
 /* MENU=2 MENU=3 MENU=4 CSS */
 .bottmomenus {
-width: 960px;
+/*width: 960px; */
 margin: 30px auto ;
 }
 .bmenul {
-width: 300px;
-float: left;
+/*width: auto;
+float: left;   */
 }
 .bmenur {
-width: 300px;
-float: right;
+/*width: auto;
+float: right; */
 }
 .bmenum {
-width: auto;
-margin: 0px 330px ;
+/*width: auto;
+ margin: 0px 330px ;   */
 }
 /* FOOTER */
 .footerbor {
