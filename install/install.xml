@@ -218,5 +218,82 @@
 			<field name="gen_chardata"><![CDATA[[html]<p><strong class=&quot;bold&quot;>Welcome to your new website!</strong><br><br><span>e107 has been installed successfully and is now ready to accept content. Your administration section is </span><a class=&quot;bbcode&quot; href=&quot;{e_ADMIN}admin.php&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>located here</a><span>, click to go there now. You will need to login using the name and password which you entered during the installation process.</span><br><br><strong class=&quot;bbcode bold&quot;>Support</strong><br><a class=&quot;bbcode&quot; href=&quot;http://e107.org/&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>e107 Homepage</a><br><a class=&quot;bbcode&quot; href=&quot;http://e107help.org/&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>e107 Help</a><br><a class=&quot;bbcode&quot; href=&quot;http://e107.org/developer-manual/&quot; rel=&quot;external&quot; target=&quot;_blank&quot;>e107 Developer Manual</a><br><br><span>Thank you for trying e107, we hope it fulfills your website needs.</span></p>[/html]]]></field>
 		</item>
 	</dbTable>
+	<dbTable name="links">
+		<item>
+			<field name="link_id">13</field>
+			<field name="link_name">e107 CMS</field>
+			<field name="link_url">http://e107.org/</field>
+			<field name="link_description"></field>
+			<field name="link_button"></field>
+			<field name="link_category">3</field>
+			<field name="link_order">12</field>
+			<field name="link_parent">0</field>
+			<field name="link_open">1</field>
+			<field name="link_class">0</field>
+			<field name="link_function"></field>
+			<field name="link_sefurl"></field>
+			<field name="link_owner"></field>
+		</item>
+		<item>
+			<field name="link_id">14</field>
+			<field name="link_name">e107 Plugins</field>
+			<field name="link_url">http://e107.org/plugins/</field>
+			<field name="link_description"></field>
+			<field name="link_button"></field>
+			<field name="link_category">3</field>
+			<field name="link_order">13</field>
+			<field name="link_parent">0</field>
+			<field name="link_open">1</field>
+			<field name="link_class">0</field>
+			<field name="link_function"></field>
+			<field name="link_sefurl"></field>
+			<field name="link_owner"></field>
+		</item>
+		<item>
+			<field name="link_id">15</field>
+			<field name="link_name">e107 Themes</field>
+			<field name="link_url">http://e107.org/themes/</field>
+			<field name="link_description"></field>
+			<field name="link_button"></field>
+			<field name="link_category">3</field>
+			<field name="link_order">14</field>
+			<field name="link_parent">0</field>
+			<field name="link_open">1</field>
+			<field name="link_class">0</field>
+			<field name="link_function"></field>
+			<field name="link_sefurl"></field>
+			<field name="link_owner"></field>
+		</item>
+		<item>
+			<field name="link_id">16</field>
+			<field name="link_name">e107 Handbook</field>
+			<field name="link_url"> http://e107.org/developer-manual</field>
+			<field name="link_description"></field>
+			<field name="link_button"></field>
+			<field name="link_category">3</field>
+			<field name="link_order">15</field>
+			<field name="link_parent">0</field>
+			<field name="link_open">1</field>
+			<field name="link_class">0</field>
+			<field name="link_function"></field>
+			<field name="link_sefurl"></field>
+			<field name="link_owner"></field>
+		</item>
+		<item>
+			<field name="link_id">17</field>
+			<field name="link_name">e107 Showcase</field>
+			<field name="link_url">http://e107.org/showcase</field>
+			<field name="link_description"></field>
+			<field name="link_button"></field>
+			<field name="link_category">3</field>
+			<field name="link_order">16</field>
+			<field name="link_parent">0</field>
+			<field name="link_open">1</field>
+			<field name="link_class">0</field>
+			<field name="link_function"></field>
+			<field name="link_sefurl"></field>
+			<field name="link_owner"></field>
+		</item>
+	</dbTable>
 	</database>
 </e107Export>

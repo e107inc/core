@@ -137,16 +137,16 @@ $NAVIGATION_TEMPLATE['side']['submenu_end'] 		= '';
 
 // Footer links.  - ie. 3 columns of links. 
 
-$NAVIGATION_TEMPLATE["footer"]["start"] 				= "<ul class='list-unstyled nav-footer row'>\n";
-$NAVIGATION_TEMPLATE["footer"]["item"] 					= "<li class='col-md-4'><a href='{LINK_URL}'{LINK_OPEN} title=\"{LINK_DESCRIPTION}\">{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["item_submenu"] 			= "<li class='nav-header col-md-4'>{LINK_ICON}{LINK_NAME}{LINK_SUB}</li>\n";
-$NAVIGATION_TEMPLATE["footer"]["item_active"] 			= "<li class='active'{LINK_OPEN}><a href='{LINK_URL}' title=\"{LINK_DESCRIPTION}\">{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["end"] 					= "</ul>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_start"] 		= "<ul class='list-unstyled'>";
-$NAVIGATION_TEMPLATE["footer"]["submenu_item"]			= "<li><a href='{LINK_URL}'{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_loweritem"] 	= "<li><a href='{LINK_URL}'{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>{LINK_SUB}</li>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_item_active"] 	= "<li class='active'><a href='{LINK_URL}'>{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_end"] 			= "</ul>";
+$NAVIGATION_TEMPLATE["footer"]["start"] 				= "";
+$NAVIGATION_TEMPLATE["footer"]["item"] 					= "<a href='{LINK_URL}'{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>&nbsp;&nbsp;";
+$NAVIGATION_TEMPLATE["footer"]["item_submenu"] 			= "";
+$NAVIGATION_TEMPLATE["footer"]["item_active"] 			= "<a  class='active' href='{LINK_URL}'>{LINK_ICON}{LINK_NAME}</a>&nbsp;&nbsp;";
+$NAVIGATION_TEMPLATE["footer"]["end"] 					= "";
+$NAVIGATION_TEMPLATE["footer"]["submenu_start"] 		= "";
+$NAVIGATION_TEMPLATE["footer"]["submenu_item"]			= "";
+$NAVIGATION_TEMPLATE["footer"]["submenu_loweritem"] 	= "";
+$NAVIGATION_TEMPLATE["footer"]["submenu_item_active"] 	= "";
+$NAVIGATION_TEMPLATE["footer"]["submenu_end"] 			= "";
 
 
 

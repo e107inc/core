@@ -99,8 +99,7 @@ $footer = '
 	</div>
 	<div class="footerlinks row">
 	  <div class="col-xs-12">
-	  {LINKSTYLE=bottom}
-	  {SITELINKS=flat:3}
+	  {NAVIGATION=footer}
 	  </div>
 	</div>
 </div>
@@ -405,17 +404,7 @@ function linkstyle($np_linkstyle) {
   $linkstyleset['linkstart_hilite'] = "<li>";
 	$linkstyleset['linkclass_hilite'] = "";
 	$linkstyleset['linkseparator'] = "";
-    break;
-  case 'bottom':
-  $linkstyleset['linkdisplay']      = 1;
-	$linkstyleset['prelink'] = "";
-	$linkstyleset['postlink'] = "";
-  $linkstyleset['linkstart'] = "";
-	$linkstyleset['linkend'] = "";
-  $linkstyleset['linkstart_hilite'] = "";
-	$linkstyleset['linkclass_hilite'] = "";
-	$linkstyleset['linkseparator'] = "&nbsp;&nbsp;";
-    break;
+   break;
   default: // if no LINKSTYLE defined
   $linkstyleset['linkdisplay']      = 1;
   define('PRELINK', '');
