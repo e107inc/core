@@ -1333,12 +1333,24 @@ padding: 10px 5px ;
 
 /* New Column Class for width < 558px */
 @media (max-width: 558px) { 
-.col-xxs-12 {
-  position: relative;
-  min-height: 1px;
-  width: 100%;
- } 
-.fmenul {
- float: none;
-}
+	.col-xxs-12 {
+	  position: relative;
+	  min-height: 1px;
+	  width: 100%;
+	 } 
+	.fmenul {
+	 float: none;
+	}
+	
+	.leftbox_title {
+	    padding: 10px 12px;
+	    font-size: 15px;
+	    text-shadow: 2px 2px 2px #B5B5B7;
+	}
+	
+	.topcontentall {
+    margin: 0px;
+    background-color: #FFFFFF;
+    padding: 10px 2px;
+ }
 }
