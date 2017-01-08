@@ -195,7 +195,9 @@ $LAYOUT['login'] =  '
   <div class="container">
      {ALERTS}
   </div>
+  <div class="container text-center">
   {---}
+  </div>
  ';							  
 
 // for future using 

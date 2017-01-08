@@ -30,4 +30,6 @@ define("LAN_SEARCH_SUB", "Go");
 define('LAN_THEME_SHARE', 'Share this');
 define('LAN_THEME_VER', 'e107 v.');
 define("CM_L13", "by");
+
+define("LAN_THEME_LOGIN_4", "Please enter your details to gain access."); // XXX Modified
 ?>

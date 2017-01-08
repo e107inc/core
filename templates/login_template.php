@@ -1,94 +1,69 @@
 <?php
-// $Id: login_template.php 11346 2010-02-17 18:56:14Z secretr $
+// $Id$
 
 if (!defined('e107_INIT')) { exit; }
+ 
+ 
+// Starter for v2. - Bootstrap 
+$LOGIN_TEMPLATE['page']['header'] = "
+	<div class='container login'><br />
+		<div class='row text-center'>  
+			<p>{SITELOGO}</p>
+ 
+";
 
-// ##### LOGIN HEADER TABLE -----------------------------------------------------------------------
-if(!isset($LOGIN_TABLE_HEADER))
-{
-	$LOGIN_TABLE_HEADER = "
-	<div style='width:100%;text-align:center; margin-left: auto;margin-right: auto;  margin-top: 0px'><br />
-		<div style='text-align:center;width:70%;margin-left: auto;margin-right: auto'>
-			".(file_exists(THEME."images/login_logo.png") ? "<img src='".THEME_ABS."images/login_logo.png' alt='' />" : "<img src='".e_IMAGE."logo.png' alt='' />" );
-}
+$LOGIN_TEMPLATE['page']['header'] .= "
+	<div class='bottmomenusbox'>
+		<div class='title_clean'>".LAN_LOGIN_3." | ".SITENAME."</div>
+		<div class='bottmomenus_text'>";
 
-// ##### LOGIN TABLE -----------------------------------------------------------------------------
-if(!isset($LOGIN_TABLE))
-{
-		$LOGIN_TABLE = '';
-		if($LOGIN_TABLE_LOGINMESSAGE != '')
-		{
-			$LOGIN_TABLE .= "<div style='text-align:center'>{LOGIN_TABLE_LOGINMESSAGE}</div>";
-		}
-		if (!isset($LOGIN_TABLE_SECIMG_SECIMG))
-		{
-			$LOGIN_TABLE_SECIMG_SECIMG = FALSE;
-		}
-		$LOGIN_TABLE .= "
-		<div style='text-align:center;'>
-		".$rs -> form_open("post", e_SELF)."
-			<table style='width:60%' >
-				<tr>
-					<td style='text-align:center; font-weight: bold; padding: 20px 0 30px 0; font-zise: 15px' colspan='3'>
-					".LAN_LOGIN_4."
-					</td>
-				</tr>
-				<tr>
-					<td class='title_clean'  style='text-align:left; width: 40%'>
-						".LAN_LOGIN_1."
-					</td>
-					<td style='text-align:right; width: 40%'>
-						{LOGIN_TABLE_USERNAME}
-					</td>
-					<td rowspan='".($LOGIN_TABLE_SECIMG_SECIMG ? 3 : 2)."' style='width: 20%; vertical-align: middle; margin-left: auto; margin-right: auto; text-align: center;'>
-						".(file_exists(THEME."images/password.png") ? "<img src='".THEME_ABS."images/password.png' alt='' />" : "<img src='".e_IMAGE."generic/".IMODE."/password.png' alt='' />" )."
-					</td>
-				</tr>
-				<tr>
-					<td class='title_clean' style='text-align:left;'>
-					".LAN_LOGIN_2."
-					</td>
-					<td style='text-align:right; width: 40%'>
-						{LOGIN_TABLE_PASSWORD}
-					</td>
-				</tr>
-		";
-	if($LOGIN_TABLE_SECIMG_SECIMG){
-		$LOGIN_TABLE .= "
-				<tr>
-					<td>
-					{LOGIN_TABLE_SECIMG_LAN}
-					</td>
-					<td class='forumheader3'>
-					{LOGIN_TABLE_SECIMG_HIDDEN} {LOGIN_TABLE_SECIMG_SECIMG} {LOGIN_TABLE_SECIMG_TEXTBOC}
-					</td>
-				</tr>";
+$LOGIN_TEMPLATE['page']['body'] = '
+
+        <h2 class="form-signin-heading">'.LAN_THEME_LOGIN_4.'</h2>
+				<div class="col-md-offset-2 col-md-8"> ';
+	if (e107::pref('core', 'password_CHAP') == 2)
+	{
+		$LOGIN_TEMPLATE['page']['body'] .= "
+    	<div style='text-align: center' id='nologinmenuchap'>"."Javascript must be enabled in your browser if you wish to log into this site"."
+		</div>
+    	<span style='display:none' id='loginmenuchap'>";
+	}
+	else
+	{
+	  $LOGIN_TEMPLATE['page']['body'] .= "<span>";
 	}
 
-	$LOGIN_TABLE .= "
-				<tr>
-					<td style='text-align:center; padding: 10px 0 0 0;' colspan='3'>
-					{LOGIN_TABLE_AUTOLOGIN}<span class='smalltext' style='padding: 0 5px 5px 5px;'>{LOGIN_TABLE_AUTOLOGIN_LAN}</span><br /><br />{LOGIN_TABLE_SUBMIT}
-					</td>
-				</tr>
-			</table>".
-	$rs -> form_close()."</div>";
-}
-// ##### ------------------------------------------------------------------------------------------
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_USERNAME'] = "<div class='form-group'>{---}</div>";
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_PASSWORD'] = "<div class='form-group'>{---}</div>";
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_SECIMG_SECIMG'] = "<div class='form-group'>{---}</div>";
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_SECIMG_TEXTBOC'] = "<div class='form-group'>{---}</div>";
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_REMEMBERME'] = "<div class='form-group checkbox'>{---}</div>";
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_SUBMIT'] = "<div class='form-group'>{---}</div>";
+$LOGIN_WRAPPER['page']['LOGIN_TABLE_FOOTER_USERREG'] = "<div class='form-group'>{---}</div>";
+// $LOGIN_WRAPPER['page']['LOGIN_TABLE_FPW_LINK'] = "<div class='form-group'>{---}</div>";
 
-// ##### LOGIN TABLE FOOTER -----------------------------------------------------------------------
-if(!isset($LOGIN_TABLE_FOOTER))
-{
-			$LOGIN_TABLE_FOOTER = "
-			<div style='width:70%;margin-right:auto;margin-left:auto; font-weight: bold;'>
-				<div style='text-align:center'><br />
-					{LOGIN_TABLE_FOOTER_USERREG} </a>
-				</div>
+$LOGIN_TEMPLATE['page']['body'] .= '
+        {LOGIN_TABLE_USERNAME}
+        {LOGIN_TABLE_PASSWORD}
+        {SOCIAL_LOGIN: size=3x}
+				{LOGIN_TABLE_SECIMG_SECIMG} {LOGIN_TABLE_SECIMG_TEXTBOC}
+        {LOGIN_TABLE_REMEMBERME}
+        {LOGIN_TABLE_SUBMIT}
+
+ ';
+
+$LOGIN_TEMPLATE['page']['footer'] =  "
+			<div style='margin-bottom:100px; margin-right:auto;margin-left:auto'>
+				<div style='text-align:right'><p>{LOGIN_TABLE_SIGNUP_LINK}</p></div>
+				<div style='text-align:right'><p>{LOGIN_TABLE_FPW_LINK}</p></div>
 			</div>
-		</div>
+			</div>
 	</div>";
-}
-// ##### ------------------------------------------------------------------------------------------
+	
 
+/* workaround login caption */
+$LOGIN_TEMPLATE['page']['footer'] .= "
+			</div>
+		</div>";
 
 ?>
