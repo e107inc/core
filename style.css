@@ -95,8 +95,8 @@ a.bg-primary:focus {
 }
 
 .btn-primary {
-  color: #ffffff;
-  background-color: #3399cc;
+  color: #3399cc;
+  background-color: #ffffff;
   border-color: #2e8ab8;
 }
 
@@ -107,8 +107,8 @@ a.bg-primary:focus {
   border-color: #143d52;
 }
 .btn-primary:hover {
-  color: #ffffff;
-  background-color: #297aa3;
+  color: #297aa3;
+  background-color: #ffffff;
   border-color: #226587;
 }
 .btn-primary:active,
@@ -622,12 +622,15 @@ width: 200px;
 float: left;
 padding: 20px 0px 0px 20px;
 }
+
 .singin a {
 color: #3399CC;
 text-decoration: underline;
 font-weight: bold;
 font-size: 14px;
 }
+
+ 
 .singin a:hover {
 text-decoration: none;
 }
@@ -1552,43 +1555,40 @@ img.logo {
     margin-right: 5px;
 }
 
-#login-template { max-width: 330px;  margin-right: auto;  margin-left: auto;     }
+#login-template {  
+  margin-right: auto;  margin-left: auto;     }
 #login-template h2.caption { text-align:center; font-size:120%; opacity:0.8 }
 #login-template .logo { padding-top:50px; margin-left:auto; margin-right: auto }
 
-/* Sign in Page */
-
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+div.subtitle_clean {
+ text-align: center;
+    font-weight: bold;
+    padding: 20px 0 30px 0;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+ 
+ .vcenter {
+     margin-top: 10px;
+ }
+ 
+ .btn {
+  text-align: center;
+    background-color: #FFFFFF;
+    border: 1px #B5B5B7 solid;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    font-weight: bold;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: hand;
+    cursor: pointer;
+    color: #333333;
+ }
+ 
+ .btn:hover {
+    color: #3399CC;
+    border: 1px #EEEEEE solid;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
 }

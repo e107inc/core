@@ -204,11 +204,6 @@ function tablestyle($caption, $text, $id='', $info=array())
 
 	if($id == 'login_page') // Example - If rendered from 'welcome message' 
 	{
-			if(!empty($caption))
-		{
-			echo '<h2 class="caption">'.$caption.'</h2>';
-		}
-	
 		echo $text;
 		return;	
 	}
