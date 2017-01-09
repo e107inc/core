@@ -28,9 +28,6 @@
 		<layout name='full' title='Full width page'  >
             <custompages>forum content signup fwp calendar_menu</custompages>																	            
 		</layout>
-		<layout name='login' title='Full page without header'  >
-            <custompages>login</custompages>																	            
-		</layout>
 		<layout name='sidebar_right' title='Blog sidebar-right' default='true' >
 			<custompages>/news</custompages>	
 		</layout>

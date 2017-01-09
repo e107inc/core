@@ -187,22 +187,31 @@ $LAYOUT['sidebar_right']     = $header.'
 	<div class="footerbor"></div>'
 	.$footer;
 
-$LAYOUT['login'] =  '  
-  {SETSTYLE=none}
-  <div class="container">
-     {ALERTS}
-  </div>
-  <div class="container text-center">
-  {---}
-  </div>
- ';							  
+ 						  
 
 // for future using 
 $LAYOUT['sidebar_left'] =  $LAYOUT['sidebar_right']; 
  
  //	[tablestyle]
-function tablestyle($caption, $text, $mode=''){
-	global $style;
+function tablestyle($caption, $text, $id='', $info=array())
+{
+//	global $style; // no longer needed. .
+	$style = $info['setStyle'];
+	
+	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
+	
+	$type = $style;
+
+	if($id == 'login_page') // Example - If rendered from 'welcome message' 
+	{
+			if(!empty($caption))
+		{
+			echo '<h2 class="caption">'.$caption.'</h2>';
+		}
+	
+		echo $text;
+		return;	
+	}
 	
 	if($mode == 'admin_update')
 	{
