@@ -1570,6 +1570,7 @@ div.subtitle_clean {
      margin-top: 10px;
  }
  
+ /* replace all bootstrap buttons */
  .btn {
   text-align: center;
     background-color: #FFFFFF;
@@ -1588,6 +1589,7 @@ div.subtitle_clean {
  .btn:hover {
     color: #3399CC;
     border: 1px #EEEEEE solid;
+    background-color: #FFFFFF;
     -moz-border-radius: 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
