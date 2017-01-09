@@ -7,9 +7,6 @@ e107::lan('theme');
 define("BOOTSTRAP", 	3);
 define("FONTAWESOME", 	4);
 define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
-
-// standalone login page
-if((strpos(e_REQUEST_URI, 'login') !== false)) {define('e_IFRAME','0');}
  
 define('IMODE', 'lite');
 define('STANDARDS_MODE', TRUE);
