@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e107Theme name="Core" version="2.1.0" date="2017-01-05" compatibility="2.1.4">
-	<author name ="e107 Inc" email="themes@e107.org" url="http://e107.org" />
+	<author name ="e107" email="noreply@e107.org" url="https://github.com/e107inc/core" />
 	<summary>Core theme with twiter bootstrap support.</summary>
-	<description>a bootstrap 3 theme for the frontend</description>
+	<description>This is the 'core' theme from e107 v1.x ported for use with e107 v2.1.4 or higher. It now also uses twitter bootstrap for a responsive layout on multiple devices.</description>
 	<category>generic</category>
 	<plugins>
 		<plugin name='featurebox' url='core' />
 		<plugin name='gallery' url='core' />
-    <plugin name='rss_menu' url='core' />
+   		<plugin name='rss_menu' url='core' />
 		<plugin name='social' url='core' />
 		<plugin name='banner' url='core' />				
 	</plugins>
@@ -16,7 +16,7 @@
 		<word>core</word>
 	</keywords>
 	<screenshots>
-		<image>preview.jpg</image>
+		<image>preview.png</image>
 	</screenshots>
 	<stylesheets>
 		<css file="style.css" name="Default"  />
