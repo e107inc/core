@@ -1,0 +1,13 @@
+Core theme
+
+Version 2.1.1 – March 23rd, 2017
+- Added inline css and js option in theme preferencies
+- Added lan support for admin area
+- Updated loading boostrap files (new library way)
+- Updated/Added sidebar left layout 
+- Fixed max-width for login template in e107.css
+
+Version 2.1.0 – January 18th, 2017
+- initial release
+
+ 

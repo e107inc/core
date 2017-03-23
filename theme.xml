@@ -5,9 +5,8 @@
 	<description>This is the 'core' theme from e107 v1.x ported for use with e107 v2.1.4 or higher. It now also uses twitter bootstrap for a responsive layout on multiple devices.</description>
 	<category>generic</category>
 	<plugins>
-		<plugin name='featurebox' url='core' />
 		<plugin name='gallery' url='core' />
-   		<plugin name='rss_menu' url='core' />
+   	<plugin name='rss_menu' url='core' />
 		<plugin name='social' url='core' />
 		<plugin name='banner' url='core' />				
 	</plugins>

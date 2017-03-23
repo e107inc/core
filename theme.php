@@ -19,26 +19,19 @@ define("ADLINK_COLS",5);
 $register_sc[]='FS_SITELINKS';
 
 
-e107::css('url', 'https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css');
-e107::css('url',    'https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css');
+e107::library('load', 'bootstrap');
+e107::library('load', 'fontawesome');
 
-
-e107::js("footer", 			"https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js", 'jquery', 2);
-/*
-function theme_head() {
-	return '
-		<!--[if lte IE 7]>
-		<script type="text/javascript" src="'.THEME_ABS.'js/menu.js"></script>
-		<![endif]-->
-		<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js?load=effects" type="text/javascript"></script>
-	';
-}       */
-/* [layout]
-  custompages = homepage    $CUSTOMHEADER['HOME'] $CUSTOMFOOTER['HOME'] $CUSTOMHEADER['FULL']
-                = forum - full with page   $CUSTOMFOOTER['FULL']  $CUSTOMFOOTER['FULL']
-    default     = $HEADER   $FOOTER
-*/	
+/* override with theme prefs */
+$inlinecss = e107::pref('theme', 'inlinecss', FALSE);
+if($inlinecss) { 
+	e107::css("inline", $inlinecss);
+}
+$inlinejs = e107::pref('theme', 'inlinejs');
+if($inlinejs) { 
+	e107::js("footer-inline", $inlinejs);
+}
+ 
 
 /* reason: login page has no header */
 $LAYOUT['_header_'] = '';
@@ -167,7 +160,6 @@ $LAYOUT['sidebar_right']     = $header.'
 				{SETSTYLE=bottmomenus}
 			  {MENU=1}
 			</div>
-
 		</div>
 	</div>
 	<div class="clear"></div>
@@ -190,7 +182,36 @@ $LAYOUT['sidebar_right']     = $header.'
  						  
 
 // for future using 
-$LAYOUT['sidebar_left'] =  $LAYOUT['sidebar_right']; 
+$LAYOUT['sidebar_left'] =  $header.'
+	<div class="maincontentall row">
+	  <div class="topcontentall clearfix">	
+			<div class="leftcolall col-md-3 col-xxs-12">
+			  {NAVIGATION=side}
+				{SETSTYLE=bottmomenus}
+			  {MENU=1}
+			</div>
+	    <div class="leftcol col-md-9 col-xxs-12">
+			  {MENU=5}
+			  {---}	
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bottmomenus row">
+		<div class="bmenul col-md-4 col-xs-4 col-xxs-12">
+		  {SETSTYLE=bottmomenus}
+			{MENU=2}
+		</div>
+		<div class="bmenur col-md-4 col-xs-4 col-xxs-12">
+			{MENU=4}
+		</div>
+		<div class="bmenum col-md-4 col-xs-4 col-xxs-12">
+			{MENU=3}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="footerbor"></div>'
+	.$footer;
  
  //	[tablestyle]
 function tablestyle($caption, $text, $id='', $info=array())
